@@ -111,7 +111,12 @@
 ;;(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
-(require 'init-paredit)
+;; Don't want to conflict with C-( C-), but some other init scripts requrie paredit
+;; (require 'init-paredit)
+(unless (package-installed-p 'paredit)
+  (package-install 'paredit))
+(unless (package-installed-p 'paredit-everywhere)
+  (package-install 'paredit-everywhere))
 (require 'init-lisp)
 (require 'init-slime)
 (require 'init-clojure)
