@@ -1,7 +1,11 @@
+(require-package 'rpm-spec-mode)
+(setq rpm-spec-user-full-name "Robin Lee")
+(setq rpm-spec-user-mail-address "cheeselee@fedoraproject.org")
 (when (string= system-name "lirb-winhong")
   (setq rpm-spec-user-full-name "Li Rui Bin")
   (setq rpm-spec-user-mail-address "lirb@winhong.com"))
 
+(require-package 'highlight-symbol)
 (global-set-key (kbd "C-)") 'highlight-symbol-next)
 (global-set-key (kbd "C-(") 'highlight-symbol-prev)
 (setq calendar-week-start-day 1)
