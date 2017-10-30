@@ -10,6 +10,8 @@
 (global-set-key (kbd "C-(") 'highlight-symbol-prev)
 (setq calendar-week-start-day 1)
 
+(require-package 'go-mode)
+
 (defun goto-match-paren (arg)
   "Go to the matching parenthesis if on parenthesis, otherwise insert %.
 vi style of % jumping to matching brace."
